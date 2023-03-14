@@ -1,0 +1,6 @@
+set -e
+make -j4
+make -j4 modules_install
+make install 
+update-initramfs -c -k version
+update-grub 
